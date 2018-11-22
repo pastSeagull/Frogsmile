@@ -1,0 +1,118 @@
+{include file="public/header" /}
+<style>
+.page-container2{
+	background: #eee;
+}
+</style>
+<article class="page-container2">
+	<form action="" method="post" class="form form-horizontal" id="form-member-add">
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red"></span>授课学期：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input class="browsers" list="browsers" >
+				<datalist id="browsers">
+						
+						<option value="第一学期">
+						<option value="第一学期">	
+				</datalist>
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red"></span>授课班级：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input class="team" list="team" >
+				<datalist id="team">
+						
+						<option value="计算机1班">
+						<option value="计算机2班">	
+				</datalist>
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red"></span>人数：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input class="time" list="time" >
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red"></span>课程名称：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input class="curriculum" list="curriculum" >
+				<datalist id="curriculum">
+						
+						<option value="网页样式与布局">
+						<option value="网页样式与布局">	
+				</datalist>
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red"></span>计划课时：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input class="time" value="120" list="time" >
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red"></span>实际课时：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input class="time" list="time" >
+			</div>
+		</div>
+		<div class="row cl">
+			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+				<input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+			</div>
+		</div>
+	</form>
+</article>
+
+<!--_footer 作为公共模版分离出去--> 
+{include file="public/footer" /}
+<!--/_footer /作为公共模版分离出去--> 
+
+<!--请在下方写此页面业务相关的脚本--> 
+<script type="text/javascript">
+$(function(){
+	$('.skin-minimal input').iCheck({
+		checkboxClass: 'icheckbox-blue',
+		radioClass: 'iradio-blue',
+		increaseArea: '20%'
+	});
+	
+	$("#form-member-add").validate({
+		rules:{
+			username:{
+				required:true,
+				minlength:2,
+				maxlength:16
+			},
+			sex:{
+				required:true,
+			},
+			mobile:{
+				required:true,
+				isMobile:true,
+			},
+			email:{
+				required:true,
+				email:true,
+			},
+			uploadfile:{
+				required:true,
+			},
+			
+		},
+		onkeyup:false,
+		focusCleanup:true,
+		success:"valid",
+		submitHandler:function(form){
+			//$(form).ajaxSubmit();
+			var index = parent.layer.getFrameIndex(window.name);
+			//parent.$('.btn-refresh').click();
+			parent.layer.close(index);
+		}
+	});
+});
+</script> 
+<!--/请在上方写此页面业务相关的脚本-->
+</body>
+</html>

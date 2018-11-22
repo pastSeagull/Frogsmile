@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html lang="en" class="ie6 ielt7 ielt8 ielt9"><![endif]--><!--[if IE 7 ]><html lang="en" class="ie7 ielt8 ielt9"><![endif]--><!--[if IE 8 ]><html lang="en" class="ie8 ielt9"><![endif]--><!--[if IE 9 ]><html lang="en" class="ie9"> <![endif]--><!--[if (gt IE 9)|!(IE)]><!--> 
+<html lang="en"><!--<![endif]--> 
+	<head>
+		<meta charset="utf-8">
+		<title>Login - Akira</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="/static/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/static/css/bootstrap-responsive.min.css" rel="stylesheet">
+		<link href="/static/css/site.css" rel="stylesheet">
+		<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	</head> 
+	<body>
+		<div id="login-page" class="container">
+			<h1>Login</h1>
+			<form id="login-form" class="well" action="{:url('admin/Login/dologin')}" method="post">
+				<input class="browsers" list="browsers" >
+				<datalist id="browsers">
+						{volist name="userList" id="vo"}
+					<option value="{$vo['name']}">
+							{/volist}
+				</datalist>
+				
+				<!-- <label for="sex">用户名:</label>
+				<select id="advancecode">
+						{volist name="userList" id="vo"}
+						<option value="-1">{$vo['name']}</option>
+						{/volist}                                               
+					  </select> -->
+
+						
+				
+	
+			<!-- <input type="text" class="span2" placeholder="name" name="name"/><br /> -->
+			<input type="password" class="span2" placeholder="Password" name="password"/><br />
+			<button type="submit" class="btn btn-primary">登录</button>
+		</form>	
+		</div>
+		<script src="/static/js/jquery.min.js"></script>
+		<script src="/static/js/bootstrap.min.js"></script>
+		<script src="/static/js/site.js"></script>
+	</body>
+</html>

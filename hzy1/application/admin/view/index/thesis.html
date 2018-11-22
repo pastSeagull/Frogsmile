@@ -1,0 +1,52 @@
+﻿{include file="public/header" /}	
+<body>
+<nav class="breadcrumb">
+欢迎进入论文发表统计 <span class="c-gray en"></span>
+ <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" >
+		<i class="iconfont icon-refresh_icon"></i></a></nav>
+<div class="page-container">
+	<div class="cl pd-5 bg-1 bk-gray"> <span class="l">
+		<a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont"></i>删除</a>		 
+		<a onclick="thesisc()" class="btn btn-primary radius" ><i class="Hui-iconfont"></i>添加</a> 
+		</span> <span class="r">
+	</div>
+	<table class="table table-border table-bordered table-hover table-bg">
+		<thead>
+			<tr>
+				
+			</tr>
+			<tr class="text-c">
+				<th><input type="checkbox" value="" name=""></th>
+				<th>论文题目</th>
+				<th>刊物名称</th>
+				<th>发表期号</th>
+				<th>排名顺序</th>
+				<th>等级</th>
+				<th>状态</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+
+			<tr class="text-c">
+				<td><input type="checkbox" value="" name=""></td>
+				<td>工作室制的工学结合教学迷失探索与实践</td>
+				<td>科技视界</td>
+				<td>2018.7</td>
+				<td>第一作者</td>
+				<td>省级期刊</td>
+				<td>编辑中</td>
+				<td class="f-14">
+					<a title="提交" style="text-decoration:none"><i class="iconfont icon-tijiao"></i></a> 
+					<a onclick="thesiseditc()" title="编辑" style="text-decoration:none"><i class="iconfont icon-bianji"></i></a> 
+					<a title="删除" class="ml-5" style="text-decoration:none"><i class="iconfont icon-shanchu"></i></a></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+{include file="public/thesis" /}
+{include file="public/thesisedit" /}
+{include file="public/footer" /}
+
+</body>
+</html>

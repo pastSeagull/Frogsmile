@@ -1,0 +1,50 @@
+﻿{include file="public/header" /}	
+<body>
+<nav class="breadcrumb">
+欢迎进入获奖统计 <span class="c-gray en"></span>
+ <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" >
+		<i class="iconfont icon-refresh_icon"></i></a></nav>
+<div class="page-container">
+	<div class="cl pd-5 bg-1 bk-gray"> <span class="l">
+		<a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont"></i>删除</a>		 
+		<a onclick="awardc()" class="btn btn-primary radius" ><i class="Hui-iconfont"></i>添加</a> 
+		</span> <span class="r">
+	</div>
+	<table class="table table-border table-bordered table-hover table-bg">
+		<thead>
+			<tr>
+				
+			</tr>
+			<tr class="text-c">
+				<th><input type="checkbox" value="" name=""></th>
+				<th>获奖项目</th>
+				<th>获奖等级</th>
+				<th>获奖时间</th>
+				<th>备注</th>
+				<th>状态</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+
+			<tr class="text-c">
+				<td><input type="checkbox" value="" name=""></td>
+				<td>指导学生参加2017广西职业技术学院技能大赛高职组《软件测试》奖项</td>
+				<td>区赛三等奖</td>
+				<td>2017.5</td>
+				<td>123456</td>
+				<td>编辑中</td>
+				<td class="f-14">
+					<a title="提交" style="text-decoration:none"><i class="iconfont icon-tijiao"></i></a> 
+					<a onclick="awardeditc()" title="编辑" style="text-decoration:none"><i class="iconfont icon-bianji"></i></a> 
+					<a title="删除" class="ml-5" style="text-decoration:none"><i class="iconfont icon-shanchu"></i></a></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+{include file="public/award" /}
+{include file="public/awardedit" /}
+{include file="public/footer" /}
+
+</body>
+</html>
